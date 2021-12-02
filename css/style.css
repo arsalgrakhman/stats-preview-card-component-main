@@ -1,0 +1,114 @@
+body {
+  height: 100vh;
+  background-color: #090b1a;
+  display: flex;
+}
+
+.card {
+  margin: auto;
+  display: flex;
+  width: 80%;
+  height: 446px;
+  border-radius: 6px;
+  background-color: #1b1938;
+}
+.card .card-info {
+  width: 40%;
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .card-image {
+  width: 60%;
+  border-radius: 0 6px 6px 0;
+  background-image: url("../images/image-header-desktop.jpg");
+  height: 446px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.card .card-image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #aa5cdb;
+  border-radius: 0 6px 6px 0;
+  opacity: 0.6;
+}
+.card .card-title {
+  font-size: 2rem;
+  color: white;
+  font-family: Inter;
+  font-weight: 700;
+}
+.card .card-title .violet {
+  color: #aa5cdb;
+}
+.card .card-description {
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Inter;
+}
+.card .card-info-number {
+  display: flex;
+  justify-content: space-between;
+}
+.card .card-info-number .card-info-number-companies,
+.card .card-info-number .card-info-number-templates,
+.card .card-info-number .card-info-number-queries {
+  font-family: Inter;
+}
+.card .card-info-number .card-info-number-companies p:nth-child(1),
+.card .card-info-number .card-info-number-templates p:nth-child(1),
+.card .card-info-number .card-info-number-queries p:nth-child(1) {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.card .card-info-number .card-info-number-companies .uppercase,
+.card .card-info-number .card-info-number-templates .uppercase,
+.card .card-info-number .card-info-number-queries .uppercase {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+  font-size: 0.7em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 50px auto;
+    flex-direction: column-reverse;
+    height: 1500px;
+    width: 90%;
+  }
+  .card .card-info {
+    padding: 3em;
+    height: 40%;
+    width: auto;
+    text-align: center;
+  }
+  .card .card-info-number {
+    flex-direction: column;
+  }
+  .card .card-image {
+    border-radius: 6px 6px 0 0;
+    background-image: url("../images/image-header-mobile.jpg");
+    width: 100%;
+    height: 60%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card {
+    height: 1600px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
